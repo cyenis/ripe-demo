@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+      #sidebarMenu {
+        height: 100vh;
+        position: fixed;
+      }
+      main {
+        margin-left: 250px; /* Adjust based on sidebar width */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Admin Dashboard</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar"
+        >
+          <div class="sidebar-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#"> Dashboard </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Orders </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Products </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Customers </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Reports </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Integrations </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">Dashboard</h1>
+          </div>
+          <div class="container">
+            <!-- Your content here -->
+            <script>
+              (function (a, b) {
+                var c = function (a) {
+                  fetch("/sdk%2Fversion.txt?alt=media", { cache: "no-store" })
+                    .then(function (a) {
+                      return a.text();
+                    })
+                    .then(function (b) {
+                      a(b);
+                    });
+                };
+                (a.Ripe = a.Ripe || []),
+                  ["init", "identify", "group", "track", "page"].forEach(
+                    function (b) {
+                      a.Ripe[b] = function () {
+                        for (
+                          var c = arguments.length, d = Array(c), e = 0;
+                          e < c;
+                          e++
+                        )
+                          d[e] = arguments[e];
+                        var f = Array.prototype.slice.call(d);
+                        return f.unshift(b), a.Ripe.push(f), a.Ripe;
+                      };
+                    },
+                  ),
+                  (a.Ripe.load = function () {
+                    var a = b.createElement("script"),
+                      d = b.getElementsByTagName("script")[0];
+                    (a.async = !0),
+                      c(function (b) {
+                        var c;
+                        (a.src = ""
+                          .concat("https://storage.getripe.com", "/sdk%2F")
+                          .concat(b, "%2Fsdk.umd.js?alt=media")),
+                          null === d ||
+                          void 0 === d ||
+                          null === (c = d.parentNode) ||
+                          void 0 === c
+                            ? void 0
+                            : c.insertBefore(a, d);
+                      });
+                  }),
+                  a.Ripe.load();
+              })(window, document);
+              Ripe.init("bb5f2297-d4be-4672-b559-7a77075654d2");
+              Ripe.identify({
+                userId: "abc123ijk456",
+                traits: {
+                  firstName: "Steve",
+                  lastName: "Jobs",
+                  email: "steve@apple.com",
+                },
+              });
+            </script>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
